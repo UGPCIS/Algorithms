@@ -21,7 +21,7 @@ bool IsPrime(int value)
 int main()
 {
 
-    cout << IsPrime(25) << endl;
+    cout << IsPrime(925079) << endl;
 
     return 0;
 }
