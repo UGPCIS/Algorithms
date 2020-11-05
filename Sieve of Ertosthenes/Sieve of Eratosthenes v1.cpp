@@ -1,10 +1,11 @@
 #include <iostream>
-
+#include <vector> 
 using namespace std;
 
 const int sMax = 1000001;
 
 bool isPrime[sMax];
+vector<int> isPrimeV;
 
 void SieveOfEratosthenes(int n)
 {
@@ -31,14 +32,18 @@ void SieveOfEratosthenes(int n)
 int main()
 {
 
-    SieveOfEratosthenes(100);
+    SieveOfEratosthenes(27);
 
-    for (int i = 2; i < 100; i++)
+    for (int i = 2; i < 27; i++)
     {
         if(isPrime[i])
-            cout << i << endl;
+            isPrimeV.push_back(i);
     }
     
+    for (auto i = isPrimeV.begin(); i != isPrimeV.end(); ++i) 
+    {       if(*i + *(i + 1) + 1 == 27)
+            cout << 27 << endl;
+    }
 
     return 0;
 }

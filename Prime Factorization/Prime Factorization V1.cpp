@@ -3,9 +3,9 @@
 
 using namespace std;
 
-int f[100], expo[100], len = 0;
+long long f[100], expo[100], len = 0;
 
-void PrimeFac(int m)
+void PrimeFac(long long m)
 {
     if(m <= 1)
     {
@@ -15,11 +15,11 @@ void PrimeFac(int m)
         return;
     }
 
-    int a = 2;
+    long long a = 2;
 
     while (m > 1 && sqrt(m) >= a)
     {
-        int e = 0;
+        long long e = 0;
 
         while (m % a == 0)
         {
@@ -49,9 +49,9 @@ void PrimeFac(int m)
 int main()
 {
 
-    PrimeFac(75856478);
+    PrimeFac(77145199750673);
 
-    for (int i = 0; i < len; i++)
+    for (long long i = 0; i < len; i++)
     {
         cout << f[i] << " " << expo[i] << endl;
     }
