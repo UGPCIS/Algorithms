@@ -21,7 +21,7 @@ void ComputSum(int a[], int lenght)
     }
 }
 
-long long Qury(int y, int x)
+long long Query(int y, int x)
 {
     return sum[x] - sum[y - 1];
 }
